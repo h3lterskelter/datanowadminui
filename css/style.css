@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-purple: #6f42c1;
+    --dark-blue: #0c132d;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-dark: #343a40;
+    --text-light: #6c757d;
+    --status-green: #28a745;
+    --status-red: #dc3545;
+    --status-blue: #007bff;
+    --status-yellow: #ffc107;
+    --status-bg-green: #e9f6ec;
+    --status-bg-blue: #e6f2ff;
+    --status-bg-yellow: #fff8e7;
+    --avatar-bg-red: #f8d7da;
+    --avatar-text-red: #721c24;
+    --avatar-bg-orange: #fff3cd;
+    --avatar-text-orange: #856404;
+     --avatar-bg-blue: #d1ecf1;
+    --avatar-text-blue: #0c5460;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.logo span {
+    color: var(--primary-purple);
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn-start {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Main Content */
+.content-wrapper {
+    padding: 2rem 5%;
+}
+
+.title-section {
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, var(--dark-blue) 0%, #960002 100%);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.page-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-tab {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-tab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-tab.active {
+    background-color: var(--primary-purple);
+    color: #fff;
+    border-color: var(--primary-purple);
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid, .analytics-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+.analytics-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.chart-card h3, .card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.stat-icon.students { background-color: #e7f4ff; background-image: url('https://img.icons8.com/pastel-glyph/64/007bff/groups.png'); }
+.stat-icon.certifications { background-color: #fff8e1; background-image: url('https://img.icons8.com/ios/50/ffc107/trust.png'); }
+.stat-icon.revenue { background-color: #e9f6ec; background-image: url('https://img.icons8.com/ios-filled/50/28a745/philippine-peso.png'); }
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-title {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.activity-table, .management-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th, .activity-table td,
+.management-table th, .management-table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.management-table td { vertical-align: middle; }
+
+.activity-table th, .management-table th {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.avatar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 0.75rem;
+    font-size: 0.8rem;
+}
+.pk { background-color: var(--avatar-bg-red); color: var(--avatar-text-red); }
+.rt { background-color: var(--avatar-bg-orange); color: var(--avatar-text-orange); }
+.jh { background-color: var(--avatar-bg-blue); color: var(--avatar-text-blue); }
+.cj { background-color: var(--status-bg-green); color: var(--status-green); }
+.jr { background-color: #F08080; }
+.am { background-color: #FF7F50; } 
+.lr { background-color: #87CEEB; } 
+.md { background-color: #9370DB; } 
+
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.status.completed, .status.active { background-color: var(--status-bg-green); color: var(--status-green); }
+.status.enrolled { background-color: var(--status-bg-blue); color: var(--status-blue); }
+.status.in-progress { background-color: var(--status-bg-yellow); color: var(--status-yellow); }
+
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.table-actions {
+    display: flex;
+    gap: 1rem;
+}
+.search-input {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    width: 250px;
+}
+.btn-primary {
+    background-color: var(--primary-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.action-edit { color: var(--status-blue); text-decoration: none; font-weight: 600; }
+.action-delete, .action-suspend { color: var(--status-red); text-decoration: none; font-weight: 600; margin-left: 1rem;}
+.action-view { color: var(--primary-purple); text-decoration: none; font-weight: 600; }
