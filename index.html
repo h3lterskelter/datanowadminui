@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DataNow Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <img src="assets/logo.png" alt="DataNow Inc. Logo" class="logo-img" onerror="this.style.display='none'">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-start">Start your journey &rarr;</a>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="title-section">
+            <h1>Welcome to Dashboard!</h1>
+        </section>
+
+        <nav class="page-nav">
+            <a href="index.html" class="nav-tab active">Dashboard</a>
+            <a href="course-management.html" class="nav-tab">Course Management</a>
+            <a href="student-management.html" class="nav-tab">Student Management</a>
+            <a href="analytics-reports.html" class="nav-tab">Analytics and Reports</a>
+        </nav>
+
+        <div class="dashboard-grid">
+            <div class="card chart-card-large">
+                <h3>Student Enrollment Trends</h3>
+                <canvas id="enrollmentTrendsChart"></canvas>
+            </div>
+            <div class="card chart-card-small">
+                <h3>Course Categories</h3>
+                <canvas id="courseCategoriesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="card stat-card">
+                <div class="stat-icon-wrapper bg-blue-100">
+                    <img src="assets/stud.png" alt="Total Students">
+                </div>
+                <div class="stat-info">
+                    <span class="stat-title">Total Students</span>
+                    <span class="stat-value">220</span>
+                </div>
+            </div>
+            <div class="card stat-card">
+                 <div class="stat-icon-wrapper bg-yellow-100">
+                    <img src="assets/certi.png" alt="Certifications Issued">
+                </div>
+                <div class="stat-info">
+                    <span class="stat-title">Certifications Issued</span>
+                    <span class="stat-value">130</span>
+                </div>
+            </div>
+            <div class="card stat-card">
+                  <div class="stat-icon-wrapper bg-red-100">
+                    <!-- Path is relative to index.html -->
+                    <img src="assets/revenue.png" alt="Total Revenue">
+                </div>
+                <div class="stat-info">
+                    <span class="stat-title">Total Revenue</span>
+                    <span class="stat-value">₱54,000</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Recent Activity</h3>
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="avatar pk">PK</span> Penny Kills</td>
+                        <td>Data Analytics with Python</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>04/22/2025</td>
+                    </tr>
+                    <tr>
+                        <td><span class="avatar rt">RT</span> Robert Talls</td>
+                        <td>Data Analytics with Python</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>04/22/2025</td>
+                    </tr>
+                    <tr>
+                        <td><span class="avatar jh">JH</span> Julie Han</td>
+                        <td>Data Analytics with Power BI</td>
+                        <td><span class="status enrolled">Enrolled</span></td>
+                        <td>05/06/2025</td>
+                    </tr>
+                    <tr>
+                        <td><span class="avatar cj">CJ</span> Charlie Jack</td>
+                        <td>Data Analytics with Microsoft SQL</td>
+                        <td><span class="status in-progress">In Progress</span></td>
+                        <td>05/17/2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
