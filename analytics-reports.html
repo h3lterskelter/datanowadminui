@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics and Reports - DataNow Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">DataNow <span>Inc.</span></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-start">Start your journey &rarr;</a>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="title-section">
+            <h1>Analytics and Reports</h1>
+        </section>
+
+        <nav class="page-nav">
+            <a href="index.html" class="nav-tab">Dashboard</a>
+            <a href="course-management.html" class="nav-tab">Course Management</a>
+            <a href="student-management.html" class="nav-tab">Student Management</a>
+            <a href="analytics-reports.html" class="nav-tab active">Analytics and Reports</a>
+        </nav>
+
+        <div class="analytics-grid">
+            <div class="card chart-card">
+                <h3>Revenue Overtime</h3>
+                <canvas id="revenueOvertimeChart"></canvas>
+            </div>
+            <div class="card chart-card">
+                <h3>Top Performing Courses</h3>
+                <canvas id="topCoursesChart"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
